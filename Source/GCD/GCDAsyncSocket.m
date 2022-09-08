@@ -8110,11 +8110,11 @@ static void CFWriteStreamCallback (CFWriteStreamRef stream, CFStreamEventType ty
 **/
 - (int)socketFD
 {
-	if (!dispatch_get_specific(IsOnSocketQueueOrTargetQueueKey))
+	/*if (!dispatch_get_specific(IsOnSocketQueueOrTargetQueueKey))
 	{
 		LogWarn(@"%@ - Method only available from within the context of a performBlock: invocation", THIS_METHOD);
 		return SOCKET_NULL;
-	}
+	}*/
 	
 	if (socket4FD != SOCKET_NULL)
 		return socket4FD;
@@ -8127,11 +8127,11 @@ static void CFWriteStreamCallback (CFWriteStreamRef stream, CFStreamEventType ty
 **/
 - (int)socket4FD
 {
-	if (!dispatch_get_specific(IsOnSocketQueueOrTargetQueueKey))
+	/*if (!dispatch_get_specific(IsOnSocketQueueOrTargetQueueKey))
 	{
 		LogWarn(@"%@ - Method only available from within the context of a performBlock: invocation", THIS_METHOD);
 		return SOCKET_NULL;
-	}
+	}*/
 	
 	return socket4FD;
 }
@@ -8141,11 +8141,11 @@ static void CFWriteStreamCallback (CFWriteStreamRef stream, CFStreamEventType ty
 **/
 - (int)socket6FD
 {
-	if (!dispatch_get_specific(IsOnSocketQueueOrTargetQueueKey))
+	/*if (!dispatch_get_specific(IsOnSocketQueueOrTargetQueueKey))
 	{
 		LogWarn(@"%@ - Method only available from within the context of a performBlock: invocation", THIS_METHOD);
 		return SOCKET_NULL;
-	}
+	}*/
 	
 	return socket6FD;
 }
